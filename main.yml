@@ -8,7 +8,7 @@
   - name: Change hostname of router
     ios_config:
       lines:
-        - hostname Abby_R1
+        - hostname Nollan_R1
     become: yes
     become_method: enable
 
@@ -30,7 +30,7 @@
   - name: Configure line console 0
     ios_config:
       lines:
-        - password sysco
+        - password 123
         - login
       parents: line console 0
     become: yes
@@ -40,15 +40,6 @@
     ios_config:
       lines:
         - enable secret sysco
-    become: yes
-    become_method: enable
-
-  - name: Configure ip address of port g0/1 on router
-    ios_config:
-      lines:
-        - ip address 10.0.0.118 255.255.255.0
-        - no shutdown
-      parents: interface g0/1
     become: yes
     become_method: enable
 

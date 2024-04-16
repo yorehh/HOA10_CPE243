@@ -2,8 +2,8 @@
 R1
 
 [router:vars]
-ansible_user=abby
-ansible_password=sysco
+ansible_user=yuri
+ansible_password=123
 ansible_network_os=ios
 ansible_become=yes
 ansible_become_method=enable
